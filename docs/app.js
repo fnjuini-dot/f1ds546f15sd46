@@ -1,13 +1,19 @@
-function () {
-  if (!window.location.hostname.endsWith('.cloud')) {
+document.addEventListener('DOMContentLoaded', function () {
+  var targetDiv = document.getElementById('4kj32l5kj2344l');
+
+  if (targetDiv && !window.location.hostname.endsWith('.cloud')) {
     document.body.innerHTML = '';
     document.head.innerHTML = '';
-  }  
+    throw new Error('Blocked: invalid domain');
+  }
+});
+
 function prettyIssuer(i) {
   if (!i) return "—";
   if (i === "E7" || i.startsWith("R")) return "Let's Encrypt";
   return i;
 }
+
 function sslClass(state) {
   if (state === "action") return "red";
   if (state === "renewal") return "yellow";
