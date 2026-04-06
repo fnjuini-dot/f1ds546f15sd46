@@ -1,40 +1,3 @@
-var embedAuthorized = false;
-
-// Hide page by default
-document.documentElement.style.display = 'none';
-
-// Listen for parent handshake
-window.addEventListener('message', function (event) {
-  // CHANGE THIS to your allowed parent origin
-  if (event.origin !== 'https://your-parent-site.com') return;
-
-  if (!event.data) return;
-  if (event.data.type !== 'embed-auth') return;
-  if (event.data.key !== '4kj32l5kj2344l') return;
-
-  embedAuthorized = true;
-
-  // Show page and start app
-  document.documentElement.style.display = '';
-  startApp();
-});
-
-// Fallback: if no auth received, wipe page
-window.addEventListener('load', function () {
-  setTimeout(function () {
-    if (!embedAuthorized) {
-      document.documentElement.innerHTML = '';
-    }
-  }, 1000);
-});
-
-
-function prettyIssuer(i) {
-  if (!i) return "—";
-  if (i === "E7" || i.startsWith("R")) return "Let's Encrypt";
-  return i;
-}
-
 function sslClass(state) {
   if (state === "action") return "red";
   if (state === "renewal") return "yellow";
@@ -84,7 +47,7 @@ async function load() {
         </div>
         <div class="small">
           SSL days left: <strong>${s.sslDaysLeft ?? "—"}</strong>
-          &nbsp;|&nbsp; Issuer: ${prettyIssuer(s.sslIssuer)}
+          &nbsp;|&nbsp; Issuer: ${s.sslIssuer ?? "—"}
         </div>
       </div>
     `;
@@ -93,7 +56,5 @@ async function load() {
   });
 }
 
-function startApp() {
-  load();
-  setInterval(load, 60000);
-}
+load();
+setInterval(load, 60000);
