@@ -1,12 +1,33 @@
-document.addEventListener('DOMContentLoaded', function () {
-  var targetDiv = document.getElementById('4kj32l5kj2344l');
+var embedAuthorized = false;
 
-  if (targetDiv && !window.location.hostname.endsWith('.cloud')) {
-    document.body.innerHTML = '';
-    document.head.innerHTML = '';
-    throw new Error('Blocked: invalid domain');
-  }
+// Hide page by default
+document.documentElement.style.display = 'none';
+
+// Listen for parent handshake
+window.addEventListener('message', function (event) {
+  // CHANGE THIS to your allowed parent origin
+  if (event.origin !== 'https://your-parent-site.com') return;
+
+  if (!event.data) return;
+  if (event.data.type !== 'embed-auth') return;
+  if (event.data.key !== '4kj32l5kj2344l') return;
+
+  embedAuthorized = true;
+
+  // Show page and start app
+  document.documentElement.style.display = '';
+  startApp();
 });
+
+// Fallback: if no auth received, wipe page
+window.addEventListener('load', function () {
+  setTimeout(function () {
+    if (!embedAuthorized) {
+      document.documentElement.innerHTML = '';
+    }
+  }, 1000);
+});
+
 
 function prettyIssuer(i) {
   if (!i) return "—";
@@ -72,5 +93,7 @@ async function load() {
   });
 }
 
-load();
-setInterval(load, 60000);
+function startApp() {
+  load();
+  setInterval(load, 60000);
+}
