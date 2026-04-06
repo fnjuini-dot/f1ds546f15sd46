@@ -1,3 +1,8 @@
+function () {
+  if (!window.location.hostname.endsWith('.cloud')) {
+    document.body.innerHTML = '';
+    document.head.innerHTML = '';
+  }  
 function prettyIssuer(i) {
   if (!i) return "—";
   if (i === "E7" || i.startsWith("R")) return "Let's Encrypt";
