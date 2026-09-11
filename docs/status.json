@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-11T01:06:14.968Z",
+  "generatedAt": "2026-09-11T05:59:49.152Z",
   "sites": [
     {
       "url": "https://www.kearney.com/",
-      "checkedAt": "2026-09-11T01:06:12.404Z",
+      "checkedAt": "2026-09-11T05:59:45.773Z",
       "dnsOk": true,
       "tlsOk": true,
       "httpOk": true,
@@ -17,7 +17,7 @@
     },
     {
       "url": "https://www.de.kearney.com/",
-      "checkedAt": "2026-09-11T01:06:12.597Z",
+      "checkedAt": "2026-09-11T05:59:46.043Z",
       "dnsOk": true,
       "tlsOk": true,
       "httpOk": true,
@@ -31,7 +31,7 @@
     },
     {
       "url": "https://www.es.kearney.com/",
-      "checkedAt": "2026-09-11T01:06:12.702Z",
+      "checkedAt": "2026-09-11T05:59:46.225Z",
       "dnsOk": true,
       "tlsOk": true,
       "httpOk": true,
@@ -45,7 +45,7 @@
     },
     {
       "url": "https://www.jp.kearney.com/",
-      "checkedAt": "2026-09-11T01:06:12.823Z",
+      "checkedAt": "2026-09-11T05:59:46.500Z",
       "dnsOk": true,
       "tlsOk": true,
       "httpOk": true,
@@ -59,35 +59,35 @@
     },
     {
       "url": "https://www.kearney.cn/",
-      "checkedAt": "2026-09-11T01:06:12.966Z",
+      "checkedAt": "2026-09-11T05:59:46.731Z",
       "dnsOk": true,
       "tlsOk": true,
       "httpOk": true,
       "httpStatus": 200,
       "pageOk": true,
       "sslExpiresAt": "2026-11-03T04:07:59.000Z",
-      "sslDaysLeft": 54,
+      "sslDaysLeft": 53,
       "sslIssuer": "Google Trust Services",
       "sslSerial": "78551CC9B43065C81312EC8873B4CAE2",
       "sslState": "ok"
     },
     {
       "url": "https://www.kearney.co.kr/",
-      "checkedAt": "2026-09-11T01:06:13.241Z",
+      "checkedAt": "2026-09-11T05:59:47.006Z",
       "dnsOk": true,
       "tlsOk": true,
       "httpOk": true,
       "httpStatus": 200,
       "pageOk": true,
       "sslExpiresAt": "2026-12-03T05:43:55.000Z",
-      "sslDaysLeft": 84,
+      "sslDaysLeft": 83,
       "sslIssuer": "Google Trust Services",
       "sslSerial": "1B8D5E2EDFD0C4CF13ACEACF6FED98F8",
       "sslState": "ok"
     },
     {
       "url": "https://www.middle-east.kearney.com/",
-      "checkedAt": "2026-09-11T01:06:13.432Z",
+      "checkedAt": "2026-09-11T05:59:47.211Z",
       "dnsOk": true,
       "tlsOk": true,
       "httpOk": true,
@@ -101,7 +101,7 @@
     },
     {
       "url": "https://www.prokura.com/",
-      "checkedAt": "2026-09-11T01:06:13.841Z",
+      "checkedAt": "2026-09-11T05:59:47.563Z",
       "dnsOk": true,
       "tlsOk": true,
       "httpOk": true,
@@ -115,7 +115,7 @@
     },
     {
       "url": "https://www.jp.prokura.com/",
-      "checkedAt": "2026-09-11T01:06:14.740Z",
+      "checkedAt": "2026-09-11T05:59:48.687Z",
       "dnsOk": true,
       "tlsOk": true,
       "httpOk": true,
@@ -129,7 +129,7 @@
     },
     {
       "url": "https://www.de.prokura.com/",
-      "checkedAt": "2026-09-11T01:06:14.966Z",
+      "checkedAt": "2026-09-11T05:59:49.150Z",
       "dnsOk": true,
       "tlsOk": true,
       "httpOk": true,
